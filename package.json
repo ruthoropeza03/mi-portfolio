@@ -1,0 +1,35 @@
+{
+  "name": "mi-portfolio",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "oxlint --fix",
+    "format": "oxfmt --write src/",
+    "lint:check": "oxlint",
+    "format:check": "oxfmt --check src/"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "autoprefixer": "^10.5.4",
+    "eslint": "^9.39.5",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
+    "postcss": "^8.5.28",
+    "prettier": "^3.9.6",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.2.2"
+  }
+}

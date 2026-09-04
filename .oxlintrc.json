@@ -1,0 +1,39 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["react", "oxc"],
+  "rules": {
+    "no-unused-vars": "warn",
+    "no-undef": "error",
+    "eqeqeq": "error",
+    "no-console": "warn",
+    "no-debugger": "error",
+    "no-var": "error",
+    "prefer-const": "error",
+    "curly": "error",
+    "no-eval": "error",
+    "no-implied-eval": "error",
+    "no-extra-semi": "error",
+    "no-empty": "warn",
+    "no-multiple-empty-lines": ["warn", { "max": 1 }],
+    "no-trailing-spaces": "warn",
+    "comma-dangle": ["warn", "always-multiline"],
+    "semi": ["warn", "never"],
+    "quotes": ["warn", "single"],
+    "indent": ["warn", 2],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-key": "error",
+    "react/no-unknown-property": "warn",
+    "react/react-in-jsx-scope": "off"
+  },
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "build",
+    ".oxlintcache"
+  ],
+  "extends": [
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended"
+  ]
+}
