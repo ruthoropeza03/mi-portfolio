@@ -4,7 +4,7 @@ const certifications = [
     title: "Certificación de inglés - Nivel: C2 Proeficiente",
     issuer: "EF SET",
     year: "2026",
-    PDF: "public/certifications/EF SET Certificate.pdf",
+    PDF: "https://cert.efset.org/es/2GnWXd",
   },
 
   {
@@ -12,7 +12,7 @@ const certifications = [
     title: "Curso de Iniciacion a la IA",
     issuer: "BIG School",
     year: "2026",
-    PDF: "public/certifications/Certificado-Ruth-Daniela-Oropeza-Garcia-hkehem6u.pdf",
+    PDF: "https://drive.google.com/file/d/1IIux0sMvT47L6PWiXmx-bYMRQkwYXf4g/view?usp=sharing",
   },
 ];
 

@@ -35,7 +35,7 @@ function Contact() {
           <Button variant="primary" size="lg" href="mailto:ruthoropeza30@gmail.com">
             {t.email}
           </Button>
-          <Button variant="primary" size="lg" href="#">
+          <Button variant="primary" size="lg" href="https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl/view?usp=sharing">
             {t.cv}
           </Button>
         </div>
