@@ -1,3 +1,3 @@
-const experience = []
+const experience = [];
 
-export default experience
+export default experience;

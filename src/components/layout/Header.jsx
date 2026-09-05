@@ -1,16 +1,45 @@
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../i18n/translations";
+
 function Header() {
+  const { lang, setLang } = useLanguage();
+  const t = translations[lang];
+
   return (
     <header className="site-header">
-      <a className="brand" href="#top" aria-label="Ir al inicio">
+      <a className="brand" href="#hero" aria-label={t.brandAria}>
         <span className="brand-mark">R</span>
-        Mi Portafolio
+        {t.brand}
       </a>
-      <nav className="site-nav" aria-label="Navegación principal">
-        <a href="#projects">Proyectos</a>
-        <a href="#contact">Contacto</a>
-      </nav>
+      <div className="header-right">
+        <nav className="site-nav" aria-label={t.navAria}>
+          <a href="#skills">{t.nav.skills}</a>
+          <a href="#projects">{t.nav.projects}</a>
+          <a href="#experience">{t.nav.experience}</a>
+          <a href="#certifications">{t.nav.certifications}</a>
+          <a href="#contact">{t.nav.contact}</a>
+        </nav>
+        <div className="lang-switcher" role="group" aria-label="Language / Idioma">
+          <button
+            type="button"
+            onClick={() => setLang("es")}
+            className={lang === "es" ? "is-active" : ""}
+            aria-pressed={lang === "es"}
+          >
+            ES
+          </button>
+          <button
+            type="button"
+            onClick={() => setLang("en")}
+            className={lang === "en" ? "is-active" : ""}
+            aria-pressed={lang === "en"}
+          >
+            EN
+          </button>
+        </div>
+      </div>
     </header>
-  )
+  );
 }
 
-export default Header
+export default Header;

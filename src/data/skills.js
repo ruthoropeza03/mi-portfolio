@@ -1,3 +1,3 @@
-const skills = []
+const skills = [];
 
-export default skills
+export default skills;

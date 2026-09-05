@@ -1,58 +1,44 @@
-import { useState } from 'react'
-import { projects } from '../../data/projects'
-import Button from '../common/Button'
-import Section from '../common/Section'
+import { useState } from "react";
+import { projects } from "../../data/projects";
+import Button from "../common/Button";
+import Section from "../common/Section";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../i18n/translations";
 
 const Projects = () => {
-  const [filter, setFilter] = useState('all')
-  const tags = ['all', ...new Set(projects.flatMap(p => p.tags))]
+  const { lang } = useLanguage();
+  const t = translations[lang].projects;
+  const localized = translations[lang].projectsData;
 
-  const filteredProjects = filter === 'all' 
-    ? projects 
-    : projects.filter(p => p.tags.includes(filter))
+  const [filter, setFilter] = useState("all");
+  const tags = ["all", ...new Set(projects.flatMap((p) => p.tags))];
+
+  const filteredProjects =
+    filter === "all" ? projects : projects.filter((p) => p.tags.includes(filter));
 
   return (
-    <Section id="projects" title="Proyectos que Resuelven Problemas" subtitle="Cada proyecto tiene un objetivo de negocio claro">
-      {/* Filtros */}
+    <Section id="projects" title={t.title} subtitle={t.subtitle}>
       <div className="project-filters">
-        {tags.map(tag => (
+        {tags.map((tag) => (
           <button
             key={tag}
             onClick={() => setFilter(tag)}
             className={`filter-button
-              ${filter === tag 
-                ? 'is-active' 
-                : ''}`}
+              ${filter === tag ? "is-active" : ""}`}
           >
-            {tag.charAt(0).toUpperCase() + tag.slice(1)}
+            {tag === "all" ? t.all : tag.charAt(0).toUpperCase() + tag.slice(1)}
           </button>
         ))}
       </div>
 
-      {/* Grid de proyectos */}
       <div className="projects-grid">
-        {filteredProjects.map(project => (
+        {filteredProjects.map((project) => (
           <article key={project.id} className="project-card">
-            <div className="project-image-wrap">
-              <img 
-                src={project.image} 
-                alt={project.title}
-                className="project-image"
-                onError={(event) => {
-                  event.currentTarget.style.display = 'none'
-                }}
-              />
-              <span className="project-image-fallback" aria-hidden="true">Proyecto</span>
-            </div>
             <div className="project-content">
-              <h3>
-                {project.title}
-              </h3>
-              <p>
-                {project.description}
-              </p>
+              <h3>{localized[project.id].title}</h3>
+              <p>{localized[project.id].description}</p>
               <div className="tag-list">
-                {project.tags.map(tag => (
+                {project.tags.map((tag) => (
                   <span key={tag} className="tag">
                     {tag}
                   </span>
@@ -60,17 +46,27 @@ const Projects = () => {
               </div>
               {project.results && (
                 <div className="project-result">
-                  <p>
-                     {project.results}
-                  </p>
+                  <p>{localized[project.id].results}</p>
                 </div>
               )}
               <div className="project-actions">
-                <Button variant="primary" size="sm" href={project.liveUrl}>
-                  Ver demo
+                <Button
+                  variant="primary"
+                  size="sm"
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t.live}
                 </Button>
-                <Button variant="outline" size="sm" href={project.githubUrl}>
-                  Código
+                <Button
+                  variant="outline"
+                  size="sm"
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {t.code}
                 </Button>
               </div>
             </div>
@@ -78,7 +74,7 @@ const Projects = () => {
         ))}
       </div>
     </Section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

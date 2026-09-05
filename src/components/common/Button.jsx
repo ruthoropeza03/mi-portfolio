@@ -1,27 +1,27 @@
-const Button = ({ 
-  variant = 'primary', 
-  size = 'md', 
-  children, 
-  className = '', 
+const Button = ({
+  variant = "primary",
+  size = "md",
+  children,
+  className = "",
   onClick,
   href,
-  ...props 
+  ...props
 }) => {
-  const classes = `button button-${variant} button-${size} ${className}`.trim()
+  const classes = `button button-${variant} button-${size} ${className}`.trim();
 
   if (href) {
     return (
       <a href={href} className={classes} {...props}>
         {children}
       </a>
-    )
+    );
   }
 
   return (
     <button type="button" onClick={onClick} className={classes} {...props}>
       {children}
     </button>
-  )
-}
+  );
+};
 
-export default Button
+export default Button;

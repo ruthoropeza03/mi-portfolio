@@ -1,4 +1,4 @@
-function Section({ children, id, title, subtitle, className = '' }) {
+function Section({ children, id, title, subtitle, className = "" }) {
   return (
     <section id={id} className={`content-section ${className}`.trim()}>
       <div className="section-heading">
@@ -7,7 +7,7 @@ function Section({ children, id, title, subtitle, className = '' }) {
       </div>
       {children}
     </section>
-  )
+  );
 }
 
-export default Section
+export default Section;

@@ -1,16 +1,36 @@
-import { useScrollAnimation } from '../../hooks/useScrollAnimation'
+import Section from "../common/Section";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../i18n/translations";
+
+const skillNames = [
+  "React",
+  "Next.js",
+  "Node.js",
+  "JavaScript",
+  "Tailwind CSS",
+  "PostgreSQL",
+  "NeonDB",
+  "Google Drive",
+  "Astro",
+  "Bootstrap",
+  "bcrypt",
+];
 
 const Skills = () => {
-  const { ref, isVisible } = useScrollAnimation()
+  const { lang } = useLanguage();
+  const t = translations[lang].skills;
 
   return (
-    <section ref={ref} id="skills" className={`content-section skills-section ${isVisible ? 'is-visible' : ''}`}>
-      <div className="section-heading">
-        <h2>Habilidades</h2>
-        <p>Agrega aquí tus tecnologías y competencias principales.</p>
+    <Section id="skills" className="skills-section" title={t.title} subtitle={t.subtitle}>
+      <div className="skill-strip" aria-label={t.aria}>
+        {skillNames.map((skill) => (
+          <span key={skill} className="skill-chip">
+            {skill}
+          </span>
+        ))}
       </div>
-    </section>
-  )
-}
+    </Section>
+  );
+};
 
-export default Skills
+export default Skills;
