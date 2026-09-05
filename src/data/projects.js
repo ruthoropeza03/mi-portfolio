@@ -2,7 +2,7 @@ export const projects = [
   {
     id: 'ccct-ven-911',
     title: 'Portal CCCT Ven 911',
-    description: 'Portal web para gestión de solicitudes con integración de Google Drive y base de datos en NeonDB.',
+    description: 'Portal web para gestión de solicitudes administrativas con integración de Google Drive y base de datos en NeonDB.',
     image: '/images/projects/ccct-ven-911.jpg',
     tags: ['Next.js', 'Node.js', 'Tailwind', 'PostgreSQL', 'NeonDB', 'Google Drive'],
     liveUrl: 'https://portal911.vercel.app/',

@@ -26,10 +26,10 @@ const Hero = () => {
             He ayudado a empresas a optimizar su presencia digital.
           </p>
           <div className="hero-actions">
-            <Button variant="primary" size="lg">
+            <Button variant="primary" size="lg" href={"#projects"}>
               Ver proyectos ↓
             </Button>
-            <Button variant="outline" size="lg">
+            <Button variant="outline" size="lg" href={"#contact"}>
               Contactar
             </Button>
           </div>
