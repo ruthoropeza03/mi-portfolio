@@ -101,8 +101,7 @@ export const translations = {
         title: "Sistema Integral de Gestión de Proyectos",
         description:
           "Página web para la gestión de proyectos registrados en la Universidad Nacional Experimental Politécnica de la FANB.",
-        results:
-          "Centralización de la información y agilización de la toma de decisiones",
+        results: "Centralización de la información y agilización de la toma de decisiones",
       },
     },
   },
@@ -138,6 +137,9 @@ export const translations = {
       boardProj2: "Tauro Online Store",
       boardProj2Stack: "Next.js / Node.js / Tailwind",
       boardValue2: "+25% conversion",
+      boardProj3: "Integrated Project Management System",
+      boardProj3Stack: "Astro / Node.js / Bootstrap",
+      boardValue3: "Better decisions",
       boardFoot: "from a problem to a product",
     },
     skills: {

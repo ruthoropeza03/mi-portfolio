@@ -1,13 +1,15 @@
 import Button from "../common/Button";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
+import { useReveal } from "../../hooks/useReveal";
 
 function Contact() {
   const { lang } = useLanguage();
   const t = translations[lang].contact;
+  const revealRef = useReveal();
 
   return (
-    <section id="contact" className="contact-section">
+    <section ref={revealRef} id="contact" className="contact-section reveal">
       <div>
         <h2>{t.title}</h2>
       </div>
@@ -35,7 +37,11 @@ function Contact() {
           <Button variant="primary" size="lg" href="mailto:ruthoropeza30@gmail.com">
             {t.email}
           </Button>
-          <Button variant="primary" size="lg" href="https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl/view?usp=sharing">
+          <Button
+            variant="primary"
+            size="lg"
+            href="https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl/view?usp=sharing"
+          >
             {t.cv}
           </Button>
         </div>

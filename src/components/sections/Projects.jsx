@@ -34,6 +34,24 @@ const Projects = () => {
       <div className="projects-grid">
         {filteredProjects.map((project) => (
           <article key={project.id} className="project-card">
+            <div className={`project-visual project-visual-${project.id}`} aria-hidden="true">
+              <div className="project-window">
+                <span className="window-dots">
+                  <i />
+                  <i />
+                  <i />
+                </span>
+                <span className="window-line line-long" />
+                <span className="window-line line-short" />
+                <span className="window-grid">
+                  <i />
+                  <i />
+                  <i />
+                  <i />
+                </span>
+              </div>
+              <span className="visual-orb" />
+            </div>
             <div className="project-content">
               <h3>{localized[project.id].title}</h3>
               <p>{localized[project.id].description}</p>

@@ -1,12 +1,14 @@
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
+import { useReveal } from "../../hooks/useReveal";
 
 function Experience() {
   const { lang } = useLanguage();
   const t = translations[lang].experience;
+  const revealRef = useReveal();
 
   return (
-    <section id="experience" className="content-section quiet-section">
+    <section ref={revealRef} id="experience" className="content-section quiet-section reveal">
       <div className="section-heading">
         <h2>{t.title}</h2>
         <p>{t.subtitle}</p>

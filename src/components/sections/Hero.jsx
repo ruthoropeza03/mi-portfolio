@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Button from "../common/Button";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
+import heroAsset from "../../assets/hero.png";
 
 const Hero = () => {
   const { lang } = useLanguage();
@@ -47,6 +48,14 @@ const Hero = () => {
         </div>
 
         <div className="hero-visual" aria-label={t.visualAria}>
+          <div className="hero-orbit orbit-one" />
+          <div className="hero-orbit orbit-two" />
+          <span className="floating-badge badge-react">React</span>
+          <span className="floating-badge badge-node">Node.js</span>
+          <span className="floating-badge badge-db">NeonDB</span>
+          <div className="hero-device">
+            <img src={heroAsset} alt="" />
+          </div>
           <div className="signal-board">
             <div className="board-topline">
               <span>{t.kicker}</span>
