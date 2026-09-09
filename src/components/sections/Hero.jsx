@@ -48,11 +48,6 @@ const Hero = () => {
         </div>
 
         <div className="hero-visual" aria-label={t.visualAria}>
-          <div className="hero-orbit orbit-one" />
-          <div className="hero-orbit orbit-two" />
-          <span className="floating-badge badge-react">React</span>
-          <span className="floating-badge badge-node">Node.js</span>
-          <span className="floating-badge badge-db">NeonDB</span>
           <div className="hero-device">
             <img src={heroAsset} alt="" />
           </div>
