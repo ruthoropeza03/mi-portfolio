@@ -4,6 +4,54 @@ import Button from "../common/Button";
 import Section from "../common/Section";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
+import { getGoogleDriveImageUrls } from "../../utils/googleDrive";
+
+const ProjectVisual = ({ project, title, placeholderLabel, placeholderAction }) => {
+  const imageUrls = getGoogleDriveImageUrls(project.image);
+  const isPlaceholder = project.image?.startsWith("YOUR_");
+  const [imageAttempt, setImageAttempt] = useState(0);
+  const imageUrl = imageUrls[imageAttempt];
+  const imageFailed = imageAttempt >= imageUrls.length;
+  const hasImage = !isPlaceholder && Boolean(imageUrl) && !imageFailed;
+
+  return (
+    <div className={`project-visual project-visual-${project.id}`} aria-label={title}>
+      {hasImage ? (
+        <img
+          className="project-image"
+          src={imageUrl}
+          alt={title}
+          onError={() => setImageAttempt((attempt) => attempt + 1)}
+        />
+      ) : (
+        <div className="project-placeholder" aria-hidden="true">
+          <span>{placeholderLabel}</span>
+          <strong>{placeholderAction}</strong>
+        </div>
+      )}
+      {!hasImage && (
+        <>
+          <div className="project-window" aria-hidden="true">
+            <span className="window-dots">
+              <i />
+              <i />
+              <i />
+            </span>
+            <span className="window-line line-long" />
+            <span className="window-line line-short" />
+            <span className="window-grid">
+              <i />
+              <i />
+              <i />
+              <i />
+            </span>
+          </div>
+          <span className="visual-orb" aria-hidden="true" />
+        </>
+      )}
+    </div>
+  );
+};
 
 const Projects = () => {
   const { lang } = useLanguage();
@@ -34,24 +82,12 @@ const Projects = () => {
       <div className="projects-grid">
         {filteredProjects.map((project) => (
           <article key={project.id} className="project-card">
-            <div className={`project-visual project-visual-${project.id}`} aria-hidden="true">
-              <div className="project-window">
-                <span className="window-dots">
-                  <i />
-                  <i />
-                  <i />
-                </span>
-                <span className="window-line line-long" />
-                <span className="window-line line-short" />
-                <span className="window-grid">
-                  <i />
-                  <i />
-                  <i />
-                  <i />
-                </span>
-              </div>
-              <span className="visual-orb" />
-            </div>
+            <ProjectVisual
+              project={project}
+              title={localized[project.id].title}
+              placeholderLabel={t.imagePlaceholder}
+              placeholderAction={t.imagePlaceholderAction}
+            />
             <div className="project-content">
               <h3>{localized[project.id].title}</h3>
               <p>{localized[project.id].description}</p>

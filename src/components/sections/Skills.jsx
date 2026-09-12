@@ -3,17 +3,17 @@ import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
 
 const skillNames = [
-  "React",
-  "Next.js",
-  "Node.js",
-  "JavaScript",
-  "Tailwind CSS",
-  "PostgreSQL",
-  "NeonDB",
-  "Google Drive",
-  "Astro",
-  "Bootstrap",
-  "bcrypt",
+  { name: "React", icon: "react" },
+  { name: "Next.js", icon: "nextdotjs" },
+  { name: "Node.js", icon: "nodedotjs" },
+  { name: "JavaScript", icon: "javascript" },
+  { name: "Tailwind CSS", icon: "tailwindcss" },
+  { name: "PostgreSQL", icon: "postgresql" },
+  { name: "NeonDB", icon: "neon" },
+  { name: "Google Drive", icon: "googledrive" },
+  { name: "Astro", icon: "astro" },
+  { name: "Bootstrap", icon: "bootstrap" },
+  { name: "bcrypt", icon: "bcrypt" },
 ];
 
 const Skills = () => {
@@ -24,8 +24,14 @@ const Skills = () => {
     <Section id="skills" className="skills-section" title={t.title} subtitle={t.subtitle}>
       <div className="skill-strip" aria-label={t.aria}>
         {skillNames.map((skill) => (
-          <span key={skill} className="skill-chip">
-            {skill}
+          <span key={skill.name} className="skill-chip">
+            <img
+              className="skill-icon"
+              src={`https://cdn.simpleicons.org/${skill.icon}`}
+              alt=""
+              aria-hidden="true"
+            />
+            <span>{skill.name}</span>
           </span>
         ))}
       </div>

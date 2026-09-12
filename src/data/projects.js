@@ -4,7 +4,7 @@ export const projects = [
     title: "Portal CCCT Ven 911",
     description:
       "Portal web para gestión de solicitudes administrativas con integración de Google Drive y base de datos en NeonDB.",
-    image: "/images/projects/ccct-ven-911.jpg",
+    image: "https://drive.google.com/file/d/1Zp7j8Fy-aprBAY0BEe-sY5InTt69Btaw/view?usp=drive_link",
     tags: [
       "Next.js",
       "Node.js",
@@ -23,7 +23,7 @@ export const projects = [
     id: "tauro",
     title: "Tauro Tienda Online",
     description: "Pagina web para el manejo de ventas y almacen de la empresa.",
-    image: "/images/projects/tauro.jpg",
+    image: "https://drive.google.com/file/d/1ubhAs-XsVvJAB9X_PbiyRN9KbZJvrnG_/view?usp=drive_link",
     tags: ["Next.js", "Nodej.js", "JavaScript", "Tailwind", "NeonDB", "Google Drive"],
     liveUrl: "https://taurove.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/Tauro/tree/main/tauro",
@@ -35,7 +35,7 @@ export const projects = [
     title: "Sistema Integral de Gestion de Proyectos",
     description:
       "Pagina web para la gestion de proyectos registrados en la Universidad Nacional Experimental Politécnica de la FANB.",
-    image: "/images/projects/tauro.jpg",
+    image: "https://drive.google.com/file/d/1YBbiukPIW9FsrU4T6UkVfDSQPGduJq63/view?usp=drive_link",
     tags: [
       "Astro",
       "Nodej.js",
