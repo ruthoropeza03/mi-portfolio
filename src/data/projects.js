@@ -5,15 +5,7 @@ export const projects = [
     description:
       "Portal web para gestión de solicitudes administrativas con integración de Google Drive y base de datos en NeonDB.",
     image: "https://drive.google.com/file/d/1Zp7j8Fy-aprBAY0BEe-sY5InTt69Btaw/view?usp=drive_link",
-    tags: [
-      "Next.js",
-      "Node.js",
-      "Tailwind",
-      "PostgreSQL",
-      "NeonDB",
-      "Google Drive",
-      "jsonwebtoken",
-    ],
+    tags: [ "Next.js", "Node.js", "Tailwind", "PostgreSQL", "NeonDB", "Google Drive", "jsonwebtoken"],
     liveUrl: "https://portal911-git-demo-ruthoropezas-projects.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/portal911",
     results:
@@ -36,7 +28,7 @@ export const projects = [
     description:
       "Pagina web para la gestion de proyectos registrados en la Universidad Nacional Experimental Politécnica de la FANB.",
     image: "https://drive.google.com/file/d/1YBbiukPIW9FsrU4T6UkVfDSQPGduJq63/view?usp=drive_link",
-    tags: ["Astro", "Nodej.js", "JavaScript", "Bootstrap", "NeonDB", "jsonwebtoken", "bcrypt", "EmailJS"],
+    tags: ["Astro", "Node.js", "JavaScript", "Bootstrap", "NeonDB", "jsonwebtoken", "bcrypt", "EmailJS"],
     liveUrl: "https://proyecto-three-zeta.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/proyecto",
     results:
