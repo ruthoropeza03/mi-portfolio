@@ -14,7 +14,7 @@ export const projects = [
       "Google Drive",
       "jsonwebtoken",
     ],
-    liveUrl: "https://portal911.vercel.app/",
+    liveUrl: "https://portal911-git-demo-ruthoropezas-projects.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/portal911",
     results:
       "Centralización de solicitudes y reducción del 50% en tiempos de resolución administrativa",
@@ -24,7 +24,7 @@ export const projects = [
     title: "Tauro Tienda Online",
     description: "Pagina web para el manejo de ventas y almacen de la empresa.",
     image: "https://drive.google.com/file/d/1ubhAs-XsVvJAB9X_PbiyRN9KbZJvrnG_/view?usp=drive_link",
-    tags: ["Next.js", "Nodej.js", "JavaScript", "Tailwind", "NeonDB", "Google Drive"],
+    tags: ["Next.js", "Node.js", "JavaScript", "Tailwind", "NeonDB", "Google Drive"],
     liveUrl: "https://taurove.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/Tauro/tree/main/tauro",
     results:
@@ -36,16 +36,7 @@ export const projects = [
     description:
       "Pagina web para la gestion de proyectos registrados en la Universidad Nacional Experimental Politécnica de la FANB.",
     image: "https://drive.google.com/file/d/1YBbiukPIW9FsrU4T6UkVfDSQPGduJq63/view?usp=drive_link",
-    tags: [
-      "Astro",
-      "Nodej.js",
-      "JavaScript",
-      "Bootstrap",
-      "NeonDB",
-      "jsonwebtoken",
-      "bcrypt",
-      "EmailJS",
-    ],
+    tags: ["Astro", "Nodej.js", "JavaScript", "Bootstrap", "NeonDB", "jsonwebtoken", "bcrypt", "EmailJS"],
     liveUrl: "https://proyecto-three-zeta.vercel.app/",
     githubUrl: "https://github.com/ruthoropeza03/proyecto",
     results:
