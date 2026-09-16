@@ -33,11 +33,53 @@ function Header() {
         <div className="header-right">
           <nav className="site-nav" aria-label={t.navAria}>
             <a href="#skills">{t.nav.skills}</a>
+            <a href="#values">{t.nav.values}</a>
             <a href="#projects">{t.nav.projects}</a>
             <a href="#experience">{t.nav.experience}</a>
             <a href="#certifications">{t.nav.certifications}</a>
             <a href="#contact">{t.nav.contact}</a>
           </nav>
+          <details className="mobile-nav">
+            <summary>{t.mobileNavLabel}</summary>
+            <nav className="mobile-nav-menu" aria-label={t.navAria}>
+              <a
+                href="#skills"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.skills}
+              </a>
+              <a
+                href="#values"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.values}
+              </a>
+              <a
+                href="#projects"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.projects}
+              </a>
+              <a
+                href="#experience"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.experience}
+              </a>
+              <a
+                href="#certifications"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.certifications}
+              </a>
+              <a
+                href="#contact"
+                onClick={(event) => event.currentTarget.closest("details")?.removeAttribute("open")}
+              >
+                {t.nav.contact}
+              </a>
+            </nav>
+          </details>
           <div className="lang-switcher" role="group" aria-label="Language / Idioma">
             <button
               type="button"

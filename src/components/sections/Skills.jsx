@@ -14,6 +14,7 @@ const skillNames = [
   { name: "Astro", icon: "astro" },
   { name: "Bootstrap", icon: "bootstrap" },
   { name: "bcrypt", icon: "bcrypt" },
+  { name: "BotPress", icon: "bot" },
 ];
 
 const Skills = () => {

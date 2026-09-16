@@ -7,6 +7,7 @@ import { translations } from "../../i18n/translations";
 function Certifications() {
   const { lang } = useLanguage();
   const t = translations[lang].certifications;
+  const localizedCertifications = translations[lang].certificationsData;
 
   return (
     <Section id="certifications" title={t.title} subtitle={t.subtitle}>
@@ -19,7 +20,7 @@ function Certifications() {
               </div>
               <div className="certification-content">
                 <p className="certification-issuer">{certification.issuer}</p>
-                <h3>{certification.title}</h3>
+                <h3>{localizedCertifications[certification.id]?.title ?? certification.title}</h3>
                 <p className="certification-meta">{certification.year}</p>
                 <Button
                   variant="outline"

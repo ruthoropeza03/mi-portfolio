@@ -104,29 +104,34 @@ const Projects = () => {
                 </div>
               )}
               <div className="project-actions">
-                <Button
-                  variant="primary"
-                  size="sm"
-                  href={project.liveUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t.live}
-                </Button>
-                <Button
-                  variant="outline"
-                  size="sm"
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {t.code}
-                </Button>
+                {project.liveUrl && (
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.live}
+                  </Button>
+                )}
+                {project.githubUrl && (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {t.code}
+                  </Button>
+                )}
               </div>
             </div>
           </article>
         ))}
       </div>
+      <p className="project-disclaimer">{t.disclaimer}</p>
     </Section>
   );
 };

@@ -5,11 +5,13 @@ export const translations = {
     navAria: "Navegación principal",
     nav: {
       skills: "Capacidades",
+      values: "Valores",
       projects: "Proyectos",
       experience: "Experiencia",
       certifications: "Certificaciones",
       contact: "Contacto",
     },
+    mobileNavLabel: "Explorar secciones",
     hero: {
       kicker: "Ruth Oropeza / portfolio",
       systemsOnline: "systems online",
@@ -43,6 +45,28 @@ export const translations = {
         "Trabajo en todo el recorrido: desde entender el problema y ordenar la experiencia hasta construir, conectar y desplegar una solución mantenible.",
       aria: "Tecnologías principales",
     },
+    values: {
+      title: "Los valores que guían mi trabajo.",
+      subtitle:
+        "La forma en que colaboro y tomo decisiones es tan importante como la tecnología que uso para construir.",
+      items: [
+        {
+          index: "01",
+          title: "Como persona",
+          text: "Actúo con empatía, responsabilidad y respeto por las personas detrás de cada necesidad.",
+        },
+        {
+          index: "02",
+          title: "Como profesional",
+          text: "Comunico con claridad, cumplo acuerdos y busco soluciones sostenibles, no atajos frágiles.",
+        },
+        {
+          index: "03",
+          title: "Como desarrolladora",
+          text: "Aprendo continuamente, cuido los detalles y convierto problemas complejos en experiencias simples.",
+        },
+      ],
+    },
     projects: {
       title: "Proyectos que Resuelven Problemas",
       subtitle: "Cada proyecto tiene un objetivo de negocio claro",
@@ -51,6 +75,8 @@ export const translations = {
       code: "Código",
       imagePlaceholder: "Imagen de Google Drive",
       imagePlaceholderAction: "Reemplaza el enlace de la imagen",
+      disclaimer:
+        "Los proyectos y materiales mostrados cuentan con la autorización de sus propietarios. La información se presenta respetando los acuerdos de confidencialidad correspondientes.",
     },
     experience: {
       title: "Experiencia que se puede leer en el producto.",
@@ -77,6 +103,14 @@ export const translations = {
       viewPdf: "Ver PDF",
       emptyTitle: "Próximamente",
       emptyText: "Aquí aparecerán las certificaciones disponibles para consultar en PDF.",
+    },
+    certificationsData: {
+      CI1: {
+        title: "Certificación de inglés - Nivel: C2 Proficiente",
+      },
+      CIA1: {
+        title: "Curso de Iniciación a la IA",
+      },
     },
     contact: {
       title: "¿Tienes un problema que merece una mejor experiencia?",
@@ -109,6 +143,13 @@ export const translations = {
           "Página web para la gestión de proyectos registrados en la Universidad Nacional Experimental Politécnica de la FANB.",
         results: "Centralización de la información y agilización de la toma de decisiones",
       },
+      "guia-culinaria": {
+        title: "Guía Culinaria",
+        description:
+          "Chatbot interactivo que orienta a las personas con recomendaciones y consultas relacionadas con cocina.",
+        results:
+          "Una experiencia conversacional para encontrar orientación culinaria de forma sencilla",
+      },
     },
   },
   en: {
@@ -117,11 +158,13 @@ export const translations = {
     navAria: "Main navigation",
     nav: {
       skills: "Skills",
+      values: "Values",
       projects: "Projects",
       experience: "Experience",
       certifications: "Certificates",
       contact: "Contact",
     },
+    mobileNavLabel: "Explore sections",
     hero: {
       kicker: "Ruth Oropeza / portfolio",
       systemsOnline: "system's online",
@@ -154,6 +197,28 @@ export const translations = {
         "I work across the whole journey: from understanding the problem and shaping the experience to building, connecting and deploying a maintainable solution.",
       aria: "Main technologies",
     },
+    values: {
+      title: "The values that guide my work.",
+      subtitle:
+        "How I collaborate and make decisions matters just as much as the technology I use to build.",
+      items: [
+        {
+          index: "01",
+          title: "As a person",
+          text: "I act with empathy, accountability and respect for the people behind every need.",
+        },
+        {
+          index: "02",
+          title: "As a professional",
+          text: "I communicate clearly, honor commitments and pursue sustainable solutions over fragile shortcuts.",
+        },
+        {
+          index: "03",
+          title: "As a developer",
+          text: "I keep learning, care about the details and turn complex problems into simple experiences.",
+        },
+      ],
+    },
     projects: {
       title: "Projects That Solve Problems",
       subtitle: "Every project has a clear business goal",
@@ -162,6 +227,8 @@ export const translations = {
       code: "Code",
       imagePlaceholder: "Google Drive image",
       imagePlaceholderAction: "Replace the image link",
+      disclaimer:
+        "The projects and materials shown have authorization from their owners. Information is presented while respecting the applicable confidentiality agreements.",
     },
     experience: {
       title: "Experience you can read in the product.",
@@ -188,6 +255,14 @@ export const translations = {
       viewPdf: "View PDF",
       emptyTitle: "Coming soon",
       emptyText: "Available certifications will appear here for PDF viewing.",
+    },
+    certificationsData: {
+      CI1: {
+        title: "English Certification - C2 Proficient Level",
+      },
+      CIA1: {
+        title: "Introduction to AI Course",
+      },
     },
     contact: {
       title: "Have a problem that deserves a better experience?",
@@ -219,6 +294,12 @@ export const translations = {
         description:
           "Website for managing projects registered at the National Experimental Polytechnic University of the FANB.",
         results: "Centralized information and faster decision-making",
+      },
+      "guia-culinaria": {
+        title: "Guía Culinaria",
+        description:
+          "Interactive chatbot that guides people through cooking-related recommendations and questions.",
+        results: "A conversational experience for finding culinary guidance with ease",
       },
     },
   },

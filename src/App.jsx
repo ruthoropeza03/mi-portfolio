@@ -2,6 +2,7 @@ import { LanguageProvider } from "./context/LanguageContext";
 import Layout from "./components/layout/Layout";
 import Hero from "./components/sections/Hero";
 import Skills from "./components/sections/Skills";
+import Values from "./components/sections/Values";
 import Projects from "./components/sections/Projects";
 import Experience from "./components/sections/Experience";
 import Certifications from "./components/sections/Certifications";
@@ -13,6 +14,7 @@ function App() {
       <Layout>
         <Hero />
         <Skills />
+        <Values />
         <Projects />
         <Experience />
         <Certifications />
