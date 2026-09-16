@@ -1031,8 +1031,15 @@ h1 span {
     width: min(100% - 36px, 580px);
   }
   .site-header-inner {
-    flex-wrap: wrap;
-    row-gap: 14px;
+    position: relative;
+    padding-top: 58px;
+  }
+  .brand {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
   }
   main {
     padding-top: calc(126px + env(safe-area-inset-top));
