@@ -1,10 +1,14 @@
-import { useReveal } from "../../hooks/useReveal";
+import { useSectionMotion } from "../../hooks/useSectionMotion";
 
 function Section({ children, id, title, subtitle, className = "" }) {
-  const revealRef = useReveal();
+  const motionRef = useSectionMotion();
 
   return (
-    <section ref={revealRef} id={id} className={`content-section reveal ${className}`.trim()}>
+    <section
+      ref={motionRef}
+      id={id}
+      className={`content-section section-motion-${id} ${className}`.trim()}
+    >
       <div className="section-heading">
         {title && <h2>{title}</h2>}
         {subtitle && <p>{subtitle}</p>}

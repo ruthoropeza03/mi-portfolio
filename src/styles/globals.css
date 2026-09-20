@@ -494,20 +494,6 @@ h1 span {
   color: var(--muted);
   line-height: 1.75;
 }
-.reveal {
-  opacity: 0;
-  filter: blur(8px);
-  transform: translateY(24px);
-  transition:
-    opacity 800ms ease-out,
-    filter 800ms ease-out,
-    transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
-}
-.reveal.is-visible {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateY(0);
-}
 .skills-section {
   padding-top: 86px;
   padding-bottom: 86px;
@@ -979,6 +965,128 @@ h1 span {
     transform: translateY(0);
   }
 }
+@keyframes section-sweep-in {
+  from {
+    opacity: 0;
+    transform: translateX(-34px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes section-orbit-in {
+  from {
+    opacity: 0;
+    transform: rotateX(10deg) translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: rotateX(0) translateY(0);
+  }
+}
+@keyframes section-grid-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes section-line-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes section-contact-in {
+  from {
+    opacity: 0;
+    clip-path: inset(0 14% 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0);
+  }
+}
+
+.section-motion-skills,
+.section-motion-values,
+.section-motion-projects,
+.section-motion-experience,
+.section-motion-certifications,
+.section-motion-contact {
+  opacity: 1;
+}
+.motion-ready:not(.motion-active) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+.motion-active.section-motion-skills {
+  animation-name: section-sweep-in;
+}
+.motion-active.section-motion-values {
+  animation-name: section-orbit-in;
+  transform-origin: 50% 0;
+}
+.motion-active.section-motion-projects {
+  animation-name: section-grid-in;
+  transform-origin: 50% 35%;
+}
+.motion-active.section-motion-experience {
+  animation-name: section-line-in;
+  animation-delay: 120ms;
+}
+.motion-active.section-motion-certifications {
+  animation-name: section-orbit-in;
+  animation-delay: 180ms;
+  transform-origin: 50% 100%;
+}
+.motion-active.section-motion-contact {
+  animation-name: section-contact-in;
+  animation-delay: 240ms;
+}
+.motion-active.section-motion-skills,
+.motion-active.section-motion-values,
+.motion-active.section-motion-projects,
+.motion-active.section-motion-experience,
+.motion-active.section-motion-certifications,
+.motion-active.section-motion-contact {
+  animation-duration: 990ms;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+.motion-active.section-motion-values .value-item,
+.motion-active.section-motion-projects .project-card,
+.motion-active.section-motion-experience .experience-line,
+.motion-active.section-motion-certifications .certification-card {
+  animation: section-line-in 770ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.motion-ready:not(.motion-active) .section-motion-values .value-item,
+.motion-ready:not(.motion-active) .section-motion-projects .project-card,
+.motion-ready:not(.motion-active) .section-motion-experience .experience-line,
+.motion-ready:not(.motion-active) .section-motion-certifications .certification-card {
+  opacity: 1;
+  transform: none;
+}
+.motion-active.section-motion-values .value-item:nth-child(2),
+.motion-active.section-motion-projects .project-card:nth-child(2),
+.motion-active.section-motion-experience .experience-line:nth-of-type(2),
+.motion-active.section-motion-certifications .certification-card:nth-child(2) {
+  animation-delay: 90ms;
+}
+.motion-active.section-motion-values .value-item:nth-child(3),
+.motion-active.section-motion-projects .project-card:nth-child(3),
+.motion-active.section-motion-experience .experience-line:nth-of-type(3),
+.motion-active.section-motion-certifications .certification-card:nth-child(3) {
+  animation-delay: 180ms;
+}
 @keyframes gradient-shift {
   to {
     background-position: 220% center;
@@ -1309,5 +1417,17 @@ h1 span {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+  .section-motion-skills,
+  .section-motion-values,
+  .section-motion-projects,
+  .section-motion-experience,
+  .section-motion-certifications,
+  .section-motion-contact,
+  .section-motion-values .value-item,
+  .section-motion-projects .project-card,
+  .section-motion-experience .experience-line,
+  .section-motion-certifications .certification-card {
+    animation: none;
   }
 }

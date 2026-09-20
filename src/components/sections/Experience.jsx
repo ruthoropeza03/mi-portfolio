@@ -1,14 +1,18 @@
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
-import { useReveal } from "../../hooks/useReveal";
+import { useSectionMotion } from "../../hooks/useSectionMotion";
 
 function Experience() {
   const { lang } = useLanguage();
   const t = translations[lang].experience;
-  const revealRef = useReveal();
+  const motionRef = useSectionMotion();
 
   return (
-    <section ref={revealRef} id="experience" className="content-section quiet-section reveal">
+    <section
+      ref={motionRef}
+      id="experience"
+      className="content-section quiet-section section-motion-experience"
+    >
       <div className="section-heading">
         <h2>{t.title}</h2>
         <p>{t.subtitle}</p>

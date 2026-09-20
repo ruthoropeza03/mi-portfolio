@@ -2,7 +2,7 @@ import Button from "../common/Button";
 import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
-import { useReveal } from "../../hooks/useReveal";
+import { useSectionMotion } from "../../hooks/useSectionMotion";
 import { getGoogleDriveDownloadUrl, getGoogleDrivePreviewUrl } from "../../utils/googleDrive";
 
 const cvUrl = "https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl/view?usp=sharing";
@@ -10,11 +10,11 @@ const cvUrl = "https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl
 function Contact() {
   const { lang } = useLanguage();
   const t = translations[lang].contact;
-  const revealRef = useReveal();
+  const motionRef = useSectionMotion();
   const [showCv, setShowCv] = useState(false);
 
   return (
-    <section ref={revealRef} id="contact" className="contact-section reveal">
+    <section ref={motionRef} id="contact" className="contact-section section-motion-contact">
       <div>
         <h2>{t.title}</h2>
       </div>
