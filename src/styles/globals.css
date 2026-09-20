@@ -2,21 +2,26 @@
 
 :root {
   font-family: "Inter", sans-serif;
-  color: #e8e6f3;
-  background: #070312;
+  color: #ECDFD2;
+  background: #081849;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  --base: #0b1118;
-  --ink: #f7f4ff;
-  --muted: #aaa5c0;
-  --soft: #77718f;
-  --violet: #7c3aed;
-  --cyan: #22d3ee;
-  --magenta: #e879f9;
-  --green: #4ade80;
-  --glass: rgba(255, 255, 255, 0.06);
-  --line: rgba(255, 255, 255, 0.14);
+  --base: #081849;
+  --base-alt: #111f57;
+  --panel: #213885;
+  --panel-strong: #2d448f;
+  --ink: #f7efe8;
+  --muted: #cfc6c0;
+  --soft: #b4a9a3;
+  --violet: #5f3475;
+  --cyan: #8aa6ff;
+  --magenta: #893172;
+  --green: #b9c6d9;
+  --accent-gradient: linear-gradient(135deg, #5f3475 0%, #893172 32%, #213885 100%);
+  --accent-gradient-soft: linear-gradient(135deg, rgba(95, 52, 117, 0.86) 0%, rgba(137, 49, 114, 0.76) 34%, rgba(33, 56, 133, 0.7) 100%);
+  --glass: rgba(236, 223, 210, 0.06);
+  --line: rgba(255, 255, 255, 0.12);
   --mono: "JetBrains Mono", monospace;
   --display: "Space Grotesk", sans-serif;
 }
@@ -55,7 +60,7 @@ button {
   min-height: 100vh;
   overflow: hidden;
   isolation: isolate;
-  background: linear-gradient(180deg, #151d27 0%, #0d141c 36%, #0b1118 100%);
+  background: radial-gradient(circle at top, #213885 0%, #111f57 28%, #081849 60%, #050d32 100%);
 }
 .site-shell::before {
   position: absolute;
@@ -63,24 +68,24 @@ button {
   z-index: 0;
   content: "";
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.7;
   background:
     linear-gradient(
-      112deg,
+      120deg,
       transparent 0 18%,
-      rgba(105, 213, 209, 0.06) 18.1%,
+      rgba(236, 223, 210, 0.07) 18.1%,
       transparent 18.25% 100%
     ),
     linear-gradient(
-      112deg,
+      120deg,
       transparent 0 58%,
-      rgba(124, 93, 214, 0.05) 58.1%,
+      rgba(143, 92, 155, 0.1) 58.1%,
       transparent 58.25% 100%
     ),
     repeating-linear-gradient(
       90deg,
       transparent 0 119px,
-      rgba(255, 255, 255, 0.035) 120px,
+      rgba(255, 255, 255, 0.03) 120px,
       transparent 121px
     ),
     repeating-linear-gradient(
@@ -99,11 +104,11 @@ button {
   height: 42rem;
   content: "";
   pointer-events: none;
-  border: 1px solid rgba(105, 213, 209, 0.08);
+  border: 1px solid rgba(236, 223, 210, 0.14);
   border-radius: 50%;
   box-shadow:
-    0 0 0 5rem rgba(105, 213, 209, 0.025),
-    0 0 0 10rem rgba(105, 213, 209, 0.015);
+    0 0 0 5rem rgba(136, 147, 210, 0.05),
+    0 0 0 10rem rgba(143, 92, 155, 0.03);
 }
 
 main,
@@ -124,8 +129,8 @@ main,
   inset: 0 0 auto;
   width: 100%;
   padding-top: env(safe-area-inset-top);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(7, 3, 18, 0.58);
+  border-bottom: 1px solid rgba(176, 186, 255, 0.14);
+  background: rgba(9, 13, 26, 0.7);
   backdrop-filter: blur(16px);
   z-index: 10 !important;
 }
@@ -160,13 +165,13 @@ main,
   width: 34px;
   height: 34px;
   place-items: center;
-  border: 1px solid rgba(34, 211, 238, 0.75);
+  border: 1px solid rgba(142, 197, 255, 0.75);
   border-radius: 12px;
   color: var(--cyan);
   font: 600 0.76rem var(--mono);
   box-shadow:
-    0 0 22px rgba(34, 211, 238, 0.2),
-    inset 0 0 16px rgba(124, 58, 237, 0.24);
+    0 0 22px rgba(142, 197, 255, 0.2),
+    inset 0 0 16px rgba(126, 110, 245, 0.24);
 }
 .header-right {
   display: flex;
@@ -306,23 +311,23 @@ h1 span {
 }
 .button-primary {
   padding: 0 20px;
-  color: #071016;
-  background: var(--cyan);
-  box-shadow: 0 0 28px rgba(34, 211, 238, 0.24);
+  color: #f7efe8;
+  background: var(--accent-gradient);
+  box-shadow: 0 0 28px rgba(137, 49, 114, 0.28);
 }
 .button-primary:hover {
-  box-shadow: 0 0 38px rgba(34, 211, 238, 0.45);
+  box-shadow: 0 0 38px rgba(95, 52, 117, 0.45);
 }
 .button-outline {
   padding: 0 20px;
-  border-color: var(--line);
+  border-color: rgba(137, 49, 114, 0.45);
   color: var(--ink);
-  background: var(--glass);
+  background: var(--accent-gradient-soft);
   backdrop-filter: blur(14px);
 }
 .button-outline:hover {
-  border-color: rgba(34, 211, 238, 0.65);
-  color: var(--cyan);
+  border-color: rgba(137, 49, 114, 0.7);
+  color: #f7efe8;
 }
 .button-sm {
   min-height: 36px;
@@ -570,7 +575,7 @@ h1 span {
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 20px;
-  background: var(--glass);
+  background: linear-gradient(180deg, rgba(26, 35, 79, 0.88) 0%, rgba(11, 18, 45, 0.92) 100%);
   box-shadow: 0 22px 44px rgba(0, 0, 0, 0.22);
   backdrop-filter: blur(14px);
 }
@@ -590,8 +595,9 @@ h1 span {
   background: conic-gradient(
     from 0deg,
     transparent 0 55%,
-    rgba(34, 211, 238, 0.8),
-    rgba(232, 121, 249, 0.7),
+    rgba(95, 52, 117, 0.9),
+    rgba(137, 49, 114, 0.8),
+    rgba(33, 56, 133, 0.8),
     transparent 76%
   );
   mask:
@@ -605,10 +611,10 @@ h1 span {
 .project-card:hover,
 .certification-card:hover {
   transform: translateY(-7px);
-  border-color: rgba(34, 211, 238, 0.4);
+  border-color: rgba(137, 49, 114, 0.5);
   box-shadow:
     0 28px 60px rgba(0, 0, 0, 0.34),
-    0 0 36px rgba(124, 58, 237, 0.12);
+    0 0 36px rgba(95, 52, 117, 0.18);
 }
 .project-card:hover::before,
 .certification-card:hover::before {
