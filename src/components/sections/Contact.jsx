@@ -5,7 +5,7 @@ import { translations } from "../../i18n/translations";
 import { useSectionMotion } from "../../hooks/useSectionMotion";
 import { getGoogleDriveDownloadUrl, getGoogleDrivePreviewUrl } from "../../utils/googleDrive";
 
-const cvUrl = "https://drive.google.com/file/d/1iBviXKS5zLzYOtP1gVOU8HVnAFO3VMBl/view?usp=sharing";
+const cvUrl = "https://docs.google.com/document/d/1bR_TP_LL2DWy61iIryyjKe8fdwHQIVME/edit?usp=sharing&ouid=106762493859465222525&rtpof=true&sd=true";
 
 function Contact() {
   const { lang } = useLanguage();
