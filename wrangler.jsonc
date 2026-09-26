@@ -4,6 +4,12 @@
   "main": "worker.js",
   "compatibility_date": "2025-08-01",
   "assets": {
-    "directory": "./dist"
-  }
+    "directory": "./dist",
+  },
+  "r2_buckets": [
+    {
+      "binding": "PORTFOLIO_BUCKET",
+      "bucket_name": "mi-portfolio",
+    },
+  ],
 }

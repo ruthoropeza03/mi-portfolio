@@ -3,6 +3,7 @@ import Section from "../common/Section";
 import certifications from "../../data/certifications";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
+import { getCertificationPdfUrl } from "../../utils/publicAssets";
 
 function Certifications() {
   const { lang } = useLanguage();
@@ -25,7 +26,7 @@ function Certifications() {
                 <Button
                   variant="outline"
                   size="sm"
-                  href={certification.PDF}
+                  href={getCertificationPdfUrl(certification)}
                   target="_blank"
                   rel="noreferrer"
                 >

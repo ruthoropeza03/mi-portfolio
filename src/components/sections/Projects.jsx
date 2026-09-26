@@ -4,10 +4,10 @@ import Button from "../common/Button";
 import Section from "../common/Section";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
-import { getGoogleDriveImageUrls } from "../../utils/googleDrive";
+import { getProjectImageUrls } from "../../utils/publicAssets";
 
 const ProjectVisual = ({ project, title, placeholderLabel, placeholderAction }) => {
-  const imageUrls = getGoogleDriveImageUrls(project.image);
+  const imageUrls = getProjectImageUrls(project);
   const isPlaceholder = project.image?.startsWith("YOUR_");
   const [imageAttempt, setImageAttempt] = useState(0);
   const imageUrl = imageUrls[imageAttempt];

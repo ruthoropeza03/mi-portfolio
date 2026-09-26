@@ -3,15 +3,14 @@ import { useState } from "react";
 import { useLanguage } from "../../context/LanguageContext";
 import { translations } from "../../i18n/translations";
 import { useSectionMotion } from "../../hooks/useSectionMotion";
-import { getGoogleDriveDownloadUrl, getGoogleDrivePreviewUrl } from "../../utils/googleDrive";
-
-const cvUrl = "https://docs.google.com/document/d/1bR_TP_LL2DWy61iIryyjKe8fdwHQIVME/edit?usp=sharing&ouid=106762493859465222525&rtpof=true&sd=true";
+import { getCvAsset } from "../../utils/publicAssets";
 
 function Contact() {
   const { lang } = useLanguage();
   const t = translations[lang].contact;
   const motionRef = useSectionMotion();
   const [showCv, setShowCv] = useState(false);
+  const cvAsset = getCvAsset();
 
   return (
     <section ref={motionRef} id="contact" className="contact-section section-motion-contact">
@@ -61,15 +60,17 @@ function Contact() {
               </div>
               <a
                 className="button button-outline button-sm"
-                href={getGoogleDriveDownloadUrl(cvUrl)}
+                href={cvAsset.downloadUrl}
                 download
+                target={cvAsset.opensInNewTab ? "_blank" : undefined}
+                rel={cvAsset.opensInNewTab ? "noreferrer" : undefined}
               >
                 {t.cvDownload}
               </a>
             </div>
             <iframe
               title={t.cvTitle}
-              src={getGoogleDrivePreviewUrl(cvUrl)}
+              src={cvAsset.previewUrl}
               className="cv-frame"
               loading="lazy"
             />
