@@ -48,8 +48,35 @@ const Hero = () => {
         </div>
 
         <div className="hero-visual" aria-label={t.visualAria}>
+          <div className="hero-browser" aria-hidden="true">
+            <div className="browser-topbar">
+              <div className="browser-dots"><i /><i /><i /></div>
+              <span className="browser-url">{t.browserUrl}</span>
+              <span className="browser-menu">•••</span>
+            </div>
+            <div className="browser-screen">
+              <div className="browser-screen-copy">
+                <span className="browser-eyebrow">{t.browserEyebrow}</span>
+                <strong>{t.browserTitleLine1}<br />{t.browserTitleLine2}</strong>
+                <span className="browser-caption">{t.browserCaption}</span>
+                <span className="browser-line browser-line-long" />
+                <span className="browser-line browser-line-short" />
+              </div>
+              <div className="browser-interface">
+                <div className="interface-nav"><span /> <span /> <span /></div>
+                <div className="interface-chart"><i /><i /><i /><i /><i /></div>
+                <div className="interface-footer"><span /><span /><span /></div>
+              </div>
+            </div>
+          </div>
           <div className="hero-device">
             <img src={heroAsset} alt="" />
+          </div>
+          <div className="hero-tool-panel" aria-hidden="true">
+            <span className="tool-panel-label">{t.toolPanelLabel}</span>
+            <strong>1000+</strong>
+            <span>{t.toolPanelValue}</span>
+            <div className="tool-panel-bars"><i /><i /><i /><i /></div>
           </div>
           <div className="signal-board">
             <div className="board-topline">

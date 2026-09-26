@@ -38,6 +38,13 @@ export const translations = {
       boardValue3: "Mejor toma de desiciones",
 
       boardFoot: "del problema al producto",
+      browserUrl: "ruthoropeza.site/#projects",
+      browserEyebrow: "Trabajo seleccionado",
+      browserTitleLine1: "Productos digitales",
+      browserTitleLine2: "que hacen avanzar.",
+      browserCaption: "React · Next.js · Node.js",
+      toolPanelLabel: "Señal del proyecto",
+      toolPanelValue: "solicitudes / mes",
     },
     skills: {
       title: "La tecnología al servicio de una idea clara.",
@@ -190,6 +197,13 @@ export const translations = {
       boardProj3Stack: "Astro / Node.js / Bootstrap",
       boardValue3: "Better decisions",
       boardFoot: "from a problem to a product",
+      browserUrl: "ruthoropeza.site/#projects",
+      browserEyebrow: "Selected work",
+      browserTitleLine1: "Digital products",
+      browserTitleLine2: "that move work forward.",
+      browserCaption: "React · Next.js · Node.js",
+      toolPanelLabel: "Project signal",
+      toolPanelValue: "requests / month",
     },
     skills: {
       title: "Technology at the service of a clear idea.",
