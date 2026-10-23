@@ -14,6 +14,14 @@ const certifications = [
     year: "2026",
     PDF: "https://drive.google.com/file/d/1IIux0sMvT47L6PWiXmx-bYMRQkwYXf4g/view?usp=sharing",
   },
+  
+  {
+    id: "CAWS",
+    title: "Fundamentos de AWS: Cloud, Serverless y Operación",
+    issuer: "Commit Academy",
+    year: "2026",
+    PDF: "https://www.commitacademy.io/app/verify-certificate/cert_ILkiwNijTI",
+  },
 ];
 
 export default certifications;
