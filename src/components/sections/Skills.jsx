@@ -6,6 +6,8 @@ const skillNames = [
   { name: "React", icon: "react" },
   { name: "Next.js", icon: "nextdotjs" },
   { name: "Node.js", icon: "nodedotjs" },
+  { name: "Cloudflare", icon: "cloudflare" },
+  { name: "AWS", icon: "amazonaws" },
   { name: "JavaScript", icon: "javascript" },
   { name: "Tailwind CSS", icon: "tailwindcss" },
   { name: "PostgreSQL", icon: "postgresql" },
